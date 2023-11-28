@@ -1,0 +1,743 @@
+{
+  "tiles": {
+    "CS1": {
+      "trails": [],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        ["-"],
+        ["-"]
+      ]
+    },
+    "CS2": {
+      "trails": [
+        ["E"]
+      ],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        [
+          "E"
+        ]
+      ]
+    },
+    "CS3": {
+      "trails": [
+        ["E"]
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        [
+          "E"
+        ],
+        [
+          "G"
+        ],
+        [
+          "G"
+        ],
+        [
+          "Z"
+        ]
+      ]
+    },
+    "CS4": {
+      "trails": [
+        ["E", "W"]
+      ],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        [
+          "M"
+        ],
+        [
+          "E"
+        ],
+        [
+          "L"
+        ]
+      ]
+    },
+    "CS5": {
+      "trails": [
+        ["E", "W"]
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        [
+          "L"
+        ]
+      ]
+    },
+    "CS6": {
+      "trails": [
+        ["W", "S"]
+      ],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        ["M"],
+        ["M"],
+        ["E"],
+        ["L"]
+      ]
+    },
+    "CS7": {
+      "trails": [
+        ["W", "S"]
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        ["E"],
+        ["G"],
+        ["G"],
+        ["L"],
+        ["Z"]
+      ]
+    },
+    "CS8": {
+      "trails": [
+        ["N", "E"],
+        ["S"]
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        ["M", "M"]
+      ]
+    },
+    "CS9": {
+      "trails": [
+        ["N"],
+        ["E"]
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        ["M", "M"]
+      ]
+    },
+    "CS10": {
+      "trails": [
+        ["N"],
+        ["S"]
+      ],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        ["L", "L"],
+        ["Z", "Z"]
+      ]
+    },
+    "CS11": {
+      "trails": [
+        ["N", "S"],
+        ["E"]
+      ],
+      "bushes": [],
+      "baobab": true,
+      "variations": [
+        ["G", "G"],
+        ["Z", "Z"],
+        ["Z", "Z"]
+      ]
+    },
+    "CS12": {
+      "trails": [
+        ["N", "S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        ["Z", "-"]
+      ]
+    },
+    "CS13": {
+      "trails": [
+        ["N", "S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "G",
+          "-"
+        ],
+        [
+          "Z",
+          "-"
+        ]
+      ]
+    },
+    "CS14": {
+      "trails": [
+        ["W"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        [
+          "M",
+          "-"
+        ],
+        [
+          "M",
+          "E"
+        ],
+        [
+          "Z",
+          "Z"
+        ]
+      ]
+    },
+    "CS15": {
+      "trails": [
+        ["W", "S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M",
+          "E"
+        ]
+      ]
+    },
+    "CS16": {
+      "trails": [
+        ["S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        [
+          "Z",
+          "-"
+        ]
+      ]
+    },
+    "CS17": {
+      "trails": [
+        ["S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "G",
+          "-"
+        ]
+      ]
+    },
+    "CS18": {
+      "trails": [
+        ["N"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E",
+          "L"
+        ]
+      ]
+    },
+    "CS19": {
+      "trails": [
+        ["N", "E"],
+        ["S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E",
+          "G",
+          "G"
+        ]
+      ]
+    },
+    "CS20": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M"
+        ],
+        [
+          "M"
+        ],
+        [
+          "G"
+        ],
+        [
+          "L"
+        ],
+        [
+          "Z"
+        ]
+      ]
+    },
+    "CS21": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        [
+          "E"
+        ],
+        [
+          "L"
+        ],
+        [
+          "Z"
+        ],
+        [
+          "-"
+        ]
+      ]
+    },
+    "CS22": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "N"
+          ],
+          "birds": 0
+        },
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "L",
+          "-"
+        ]
+      ]
+    },
+    "CS23": {
+      "trails": [
+        ["W"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "N"
+          ],
+          "birds": 0
+        },
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M",
+          "E",
+          "E"
+        ]
+      ]
+    },
+    "CS24": {
+      "trails": [
+        ["N", "S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        },
+        {
+          "sides": [
+            "W"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E",
+          "E",
+          "L"
+        ]
+      ]
+    },
+    "CS25": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 1
+        },
+        {
+          "sides": [
+            "W"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        [
+          "M",
+          "L"
+        ],
+        [
+          "M",
+          "L"
+        ],
+        [
+          "L",
+          "-"
+        ]
+      ]
+    },
+    "CS26": {
+      "trails": [
+        ["W"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "N",
+            "E"
+          ],
+          "birds": 2
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E",
+          "E"
+        ],
+        [
+          "E",
+          "G"
+        ],
+        [
+          "E",
+          "Z"
+        ],
+        [
+          "L",
+          "L"
+        ],
+        [
+          "L",
+          "Z"
+        ]
+      ]
+    },
+    "CS27": {
+      "trails": [
+        ["S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "N",
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M",
+          "G"
+        ],
+        [
+          "M",
+          "L"
+        ]
+      ]
+    },
+    "CS28": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "N",
+            "E"
+          ],
+          "birds": 2
+        }
+      ],
+      "baobab": true,
+      "variations": [
+        [
+          "G"
+        ],
+        [
+          "Z"
+        ]
+      ]
+    },
+    "CS29": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "N",
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E"
+        ]
+      ]
+    },
+    "CS30": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "W",
+            "E"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "G"
+        ],
+        [
+          "G"
+        ],
+        [
+          "L"
+        ],
+        [
+          "Z"
+        ]
+      ]
+    },
+    "CS31": {
+      "trails": [
+        ["N"],
+        ["S"]
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "W",
+            "E"
+          ],
+          "birds": 2
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "L",
+          "Z",
+          "-"
+        ]
+      ]
+    },
+    "CS32": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "N"
+          ],
+          "birds": 0
+        },
+        {
+          "sides": [
+            "E"
+          ],
+          "birds": 0
+        },
+        {
+          "sides": [
+            "S"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "G",
+          "G",
+          "-"
+        ]
+      ]
+    },
+    "CS33": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "N",
+            "E",
+            "S"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M"
+        ],
+        ["M"],
+        ["G"]
+      ]
+    }
+  },
+  "starting_tile": {
+    "CSS1": {
+      "trails": [],
+      "bushes": [
+        {
+          "sides": [
+            "S"
+          ],
+          "birds": 0
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "E"
+        ]
+      ]
+    },
+    "CSS2": {
+      "trails": [
+        {
+          "sides": ["S"]
+        }
+      ],
+      "bushes": [],
+      "baobab": false,
+      "variations": [
+        [
+          "G"
+        ]
+      ]
+    },
+    "CSS3": {
+      "trails": [
+        {
+          "sides": ["E"]
+        }
+      ],
+      "bushes": [
+        {
+          "sides": [
+            "N"
+          ],
+          "birds": 1
+        }
+      ],
+      "baobab": false,
+      "variations": [
+        [
+          "M", "-"
+        ]
+      ]
+    }
+  }
+}
