@@ -21,10 +21,6 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         max_scale: Some(1.0),
         ..default()
     });
-    commands.spawn(SpriteBundle {
-        texture: asset_server.load("tile_base.png"),
-        ..default()
-    });
 }
 
 fn lock_entity_to_cam(mut commands: Commands,
@@ -92,9 +88,8 @@ fn main() {
                 PanCamPlugin::default()
             ),
         )
-        .add_systems(Startup,(setup, spawn_all_tiles))
+        .add_systems(Startup,(setup, spawn_starting_tiles, spawn_deck_tiles))
         .add_systems(PostStartup, (lock_entity_to_cam, deck_init_pos))
-        // .add_systems(Update, )
         .add_systems(Last, update_deck_pos_on_resize)
         .run();
 }

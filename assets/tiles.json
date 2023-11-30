@@ -706,9 +706,7 @@
     },
     "CSS2": {
       "trails": [
-        {
-          "sides": ["S"]
-        }
+        ["S"]
       ],
       "bushes": [],
       "baobab": false,
@@ -720,9 +718,7 @@
     },
     "CSS3": {
       "trails": [
-        {
-          "sides": ["E"]
-        }
+        ["E"]
       ],
       "bushes": [
         {

@@ -67,13 +67,10 @@ enum Land {
 pub struct Deck;
 
 #[derive(Component)]
-pub struct Board(Vec<Vec<Option<Entity>>>);
+pub struct InBoard((usize, usize));
 
 #[derive(Component)]
 pub struct TileName(String);
-
-#[derive(Component)]
-struct TileSideUp(bool);
 
 #[derive(Component)]
 struct Baobab;
@@ -150,7 +147,7 @@ fn pos_to_matrix_index(coord: (i32, i32), n: usize) -> (usize, usize) {
     (i, j)
 }
 
-pub fn spawn_all_tiles(mut commands: Commands, asset_server: Res<AssetServer>) {
+pub fn spawn_deck_tiles(mut commands: Commands, asset_server: Res<AssetServer>) {
     let tiles_map = TileJson::json_to_struct("tiles");
     let deck = commands.spawn((Deck, LockToCam, SpriteBundle {
         texture: asset_server.load("tile_back.png"),
@@ -162,7 +159,7 @@ pub fn spawn_all_tiles(mut commands: Commands, asset_server: Res<AssetServer>) {
         for var in tile.variations {
             println!("\t{}", var.join(""));
             // Add name
-            let mut tile_commands = commands.spawn((TileName(name.clone()), TileSideUp(false), SpriteBundle {
+            let mut tile_commands = commands.spawn((TileName(name.clone()), SpriteBundle {
                 texture: asset_server.load("tile_base.png"),
                 transform: Transform::from_xyz(0.0, 0.0, 0.0),
                 visibility: Visibility::Hidden,
@@ -214,17 +211,16 @@ pub fn spawn_all_tiles(mut commands: Commands, asset_server: Res<AssetServer>) {
     }
 }
 
-pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileName>) {
+pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileName>, asset_server: Res<AssetServer>) {
     let tiles_map = TileJson::json_to_struct("starting_tile");
     let n = query.iter().count() + tiles_map.len();
-    let mut board = vec![vec![None; n]; n];
 
     for (name, tile) in tiles_map {
         println!("Loading tile {}", name);
         for var in tile.variations {
             println!("\t{}", var.join(""));
             // Add name
-            let mut entity = commands.spawn((TileName(name.clone()), TileSideUp(true), TransformBundle::default()));
+            let mut entity = commands.spawn((TileName(name.clone())));
             // Add baobab
             if tile.baobab {
                 entity.insert(Baobab);
@@ -265,17 +261,21 @@ pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileNam
                 });
             }
 
-            let (i, j) = match name.as_str() {
-                "CSS1" => pos_to_matrix_index((-1,0), n),
-                "CSS2" => pos_to_matrix_index((0,0), n),
-                _ => pos_to_matrix_index((1,0), n),
+            let (x, y) =  match name.as_str() {
+                "CSS1" => (-1, 0),
+                "CSS2" => (0,0),
+                "CSS3" => (1,0),
+                _ => panic!()
             };
 
-            board[i][j] = Some(entity.id());
+            let (i, j) = pos_to_matrix_index((x, y), n);
+            entity.insert((InBoard((i, j)), SpriteBundle {
+                texture: asset_server.load("tile_base.png"),
+                transform: Transform::from_xyz(x as f32 * 90.0, y as f32 * 90.0, 0.0),
+                ..default()
+            }));
         }
     }
-
-    commands.spawn(Board(board));
 }
 
 #[cfg(test)]
