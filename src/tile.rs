@@ -162,7 +162,12 @@ pub fn spawn_all_tiles(mut commands: Commands, asset_server: Res<AssetServer>) {
         for var in tile.variations {
             println!("\t{}", var.join(""));
             // Add name
-            let mut tile_commands = commands.spawn((TileName(name.clone()), TileSideUp(false), TransformBundle::default()));
+            let mut tile_commands = commands.spawn((TileName(name.clone()), TileSideUp(false), SpriteBundle {
+                texture: asset_server.load("tile_base.png"),
+                transform: Transform::from_xyz(0.0, 0.0, 0.0),
+                visibility: Visibility::Hidden,
+                ..default()
+            }));
             // Add baobab
             if tile.baobab {
                 tile_commands.insert(Baobab);
