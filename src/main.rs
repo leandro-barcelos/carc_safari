@@ -10,7 +10,7 @@ use tile::*;
 #[derive(Component)]
 pub struct LockToCam;
 
-fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
+fn setup(mut commands: Commands) {
     commands.spawn(Camera2dBundle {
         camera_2d: Camera2d {
             clear_color: ClearColorConfig::Custom(Color::ANTIQUE_WHITE),
@@ -89,7 +89,7 @@ fn main() {
             ),
         )
         .add_systems(Startup,(setup, spawn_starting_tiles, spawn_deck_tiles))
-        .add_systems(PostStartup, (lock_entity_to_cam, deck_init_pos))
+        .add_systems(PostStartup, (lock_entity_to_cam, deck_init_pos, load_tiles_texture))
         .add_systems(Last, update_deck_pos_on_resize)
         .run();
 }

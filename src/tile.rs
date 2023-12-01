@@ -211,7 +211,7 @@ pub fn spawn_deck_tiles(mut commands: Commands, asset_server: Res<AssetServer>) 
     }
 }
 
-pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileName>, asset_server: Res<AssetServer>) {
+pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileName>) {
     let tiles_map = TileJson::json_to_struct("starting_tile");
     let n = query.iter().count() + tiles_map.len();
 
@@ -262,19 +262,33 @@ pub fn spawn_starting_tiles(mut commands: Commands, query: Query<&Deck, &TileNam
             }
 
             let (x, y) =  match name.as_str() {
-                "CSS1" => (-1, 0),
+                "CSS1" => (-90, 0),
                 "CSS2" => (0,0),
-                "CSS3" => (1,0),
+                "CSS3" => (90,0),
                 _ => panic!()
             };
 
             let (i, j) = pos_to_matrix_index((x, y), n);
-            entity.insert((InBoard((i, j)), SpriteBundle {
-                texture: asset_server.load("tile_base.png"),
-                transform: Transform::from_xyz(x as f32 * 90.0, y as f32 * 90.0, 0.0),
-                ..default()
-            }));
+            entity.insert(InBoard((i, j)));
         }
+    }
+}
+
+pub fn load_tiles_texture(mut commands: Commands, asset_server: Res<AssetServer>, query: Query<(Entity, &TileName)>) {
+    for (entity, name) in query.iter() {
+        let (x, y, visibility) =  match name.0.as_str() {
+            "CSS1" => (-90.0, 0.0, Visibility::Visible),
+            "CSS2" => (0.0,0.0, Visibility::Visible),
+            "CSS3" => (90.0,0.0, Visibility::Visible),
+            _ => (0.0, 0.0, Visibility::Hidden)
+        };
+
+        commands.entity(entity).insert(SpriteBundle {
+            transform: Transform::from_xyz(x, y, 0.0),
+            texture: asset_server.load(format!("tiles/{}.png", name.0)),
+            visibility,
+            ..default()
+        });
     }
 }
 
